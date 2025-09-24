@@ -1,4 +1,5 @@
 <?php
+// fonction pour la creation des inputs
 function create_input(
     $type = "text",
     $name = "",
@@ -37,7 +38,7 @@ function create_input(
     return $input;
 }
 
-
+// fonctions pour la creation des select
 function create_select($name = "", $id = "", $class = "", $style = "", $required = false, $disabled = false, $multiple = false, $options = [], $selected = []) {
     if (!is_array($selected)) $selected = [$selected];
 
@@ -64,7 +65,7 @@ function create_select($name = "", $id = "", $class = "", $style = "", $required
     return $select;
 }
 
-
+// fonction pour la creation des textarea
 function create_textarea($name = "", $id = "", $class = "", $style = "", $placeholder = "", $rows = 4, $cols = 50, $required = false, $disabled = false, $readonly = false, $value = "") {
     $textarea = "<textarea";
 
