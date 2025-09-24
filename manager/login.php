@@ -10,26 +10,50 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     if (empty($email) || empty($password)) {
         $loginError = "Email et mot de passe sont requis !";
-    }
-
-    $stmt = $pdo->prepare("SELECT id, custom_id, name, email, password, role_id FROM users WHERE email = :email");
-    $stmt->execute([':email' => $email]);
-    $user = $stmt->fetch(PDO::FETCH_ASSOC);
-
-    if ($user && password_verify($password, $user['password'])) {
-        $_SESSION['user_id'] = $user['custom_id'];
-        $_SESSION['user_name'] = $user['name'];
-        $_SESSION['user_email'] = $user['email'];
-        $_SESSION['role_id'] = $user['role_id'];
-
-        header("Location: ../success.php");
-        exit;
     } else {
-        $loginError = "Identifiants invalides !";
+        // Vérifier l'utilisateur
+        $stmt = $pdo->prepare("SELECT id, custom_id, name, email, password, role_id 
+                               FROM users 
+                               WHERE email = :email");
+        $stmt->execute([':email' => $email]);
+        $user = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        if ($user && password_verify($password, $user['password'])) {
+            // Sécurité : régénérer l'ID de session
+            session_regenerate_id(true);
+
+            // Stocker les infos utilisateur
+            $_SESSION['user_id'] = $user['custom_id'];
+            $_SESSION['user_name'] = $user['name'];
+            $_SESSION['user_email'] = $user['email'];
+            $_SESSION['role_id'] = $user['role_id'];
+
+            // Charger toutes les permissions de son rôle
+            $permStmt = $pdo->prepare("
+                SELECT p.resource, p.action
+                FROM permissions p
+                JOIN role_permissions rp ON p.id = rp.permission_id
+                WHERE rp.role_id = :role_id
+            ");
+            $permStmt->execute([':role_id' => $user['role_id']]);
+
+            $_SESSION['permissions'] = [];
+            while ($row = $permStmt->fetch(PDO::FETCH_ASSOC)) {
+                $_SESSION['permissions'][$row['resource']][] = $row['action'];
+            }
+
+            // Nettoyer les doublons
+            foreach ($_SESSION['permissions'] as $res => $actions) {
+                $_SESSION['permissions'][$res] = array_values(array_unique($actions));
+            }
+
+            header("Location: ../success.php");
+            exit;
+        } else {
+            $loginError = "Identifiants invalides !";
+        }
     }
 }
-
-
 ?>
 
 <!DOCTYPE html>

@@ -1,19 +1,19 @@
-<?php
-session_start();
-require __DIR__ . '/../includes/database.php';
+    <?php
+    session_start();
+    require __DIR__ . '/../includes/database.php';
 
-$registerError = '';
-$registerSuccess = ''; 
+    $registerError = '';
+    $registerSuccess = ''; 
 
-// Traitement du formulaire
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $name = trim($_POST["name"] ?? '');
-    $email = trim($_POST['email'] ?? '');
-    $password = $_POST['password'] ?? '';
-    $role = $_POST['role'] ?? '';
+    // Traitement du formulaire
+    if ($_SERVER["REQUEST_METHOD"] === "POST") {
+        $name = trim($_POST["name"] ?? '');
+        $email = trim($_POST['email'] ?? '');
+        $password = $_POST['password'] ?? '';
+        $role = $_POST['role'] ?? '';
 
-    // Validation des champs
-    if (empty($name) || empty($email) || empty($password) || empty($role)) {
+        // Validation des champs
+        if (empty($name) || empty($email) || empty($password) || empty($role)) {
         $registerError = "Tous les champs sont obligatoires !";
     }
 

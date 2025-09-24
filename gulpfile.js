@@ -15,11 +15,12 @@ var node_path = '../..';
 
 
 function html(cb) {
-  src('src/html/**')
-  .pipe(dest('dist/html'));
+  src('manager/**/*.html')     
+    .pipe(dest('dist/html'));  
 
   cb();
 }
+
 
 // DO NOT uses {outputStyle: 'compressed'} in saas() it could conflict with RTLCSS  
 function scss(cb) {
