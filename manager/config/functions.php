@@ -39,7 +39,18 @@ function create_input(
 }
 
 // fonctions pour la creation des select
-function create_select($name = "", $id = "", $class = "", $style = "", $required = false, $disabled = false, $multiple = false, $options = [], $selected = []) {
+function create_select(
+    $name = "",
+    $id = "",
+    $class = "",
+    $style = "",
+    $required = false,
+    $disabled = false,
+    $multiple = false,
+    $options = [],
+    $selected = [],
+    $defaultOption = "" 
+) {
     if (!is_array($selected)) $selected = [$selected];
 
     $select = "<select";
@@ -54,6 +65,11 @@ function create_select($name = "", $id = "", $class = "", $style = "", $required
 
     $select .= ">";
 
+    // Option par défaut
+    if (!empty($defaultOption)) {
+        $select .= "<option value=\"\" disabled selected>" . htmlspecialchars($defaultOption, ENT_QUOTES, 'UTF-8') . "</option>";
+    }
+
     foreach ($options as $value => $label) {
         $value = htmlspecialchars($value, ENT_QUOTES, 'UTF-8');
         $label = htmlspecialchars($label, ENT_QUOTES, 'UTF-8');
@@ -64,6 +80,7 @@ function create_select($name = "", $id = "", $class = "", $style = "", $required
     $select .= "</select>";
     return $select;
 }
+
 
 // fonction pour la creation des textarea
 function create_textarea($name = "", $id = "", $class = "", $style = "", $placeholder = "", $rows = 4, $cols = 50, $required = false, $disabled = false, $readonly = false, $value = "") {
@@ -86,4 +103,34 @@ function create_textarea($name = "", $id = "", $class = "", $style = "", $placeh
     $textarea .= "</textarea>";
 
     return $textarea;
+}
+
+// Supprimer un utilisateur
+function deleteUser($customId) {
+    global $pdo;
+    $stmt = $pdo->prepare("DELETE FROM users WHERE custom_id = :id");
+    return $stmt->execute([':id' => $customId]);
+}
+
+// Récupérer le statut actuel d’un utilisateur
+function getUserStatus($customId) {
+    global $pdo;
+    $stmt = $pdo->prepare("SELECT status FROM users WHERE custom_id = :id");
+    $stmt->execute([':id' => $customId]);
+    return $stmt->fetchColumn();
+}
+
+// Activer/Désactiver un utilisateur (toggle)
+function toggleUserStatus($customId) {
+    global $pdo;
+    $status = getUserStatus($customId);
+    if ($status !== false) {
+        $newStatus = ($status === 'active') ? 'inactive' : 'active';
+        $stmt = $pdo->prepare("UPDATE users SET status = :status WHERE custom_id = :id");
+        return $stmt->execute([
+            ':status' => $newStatus,
+            ':id'     => $customId
+        ]);
+    }
+    return false;
 }

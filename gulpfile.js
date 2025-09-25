@@ -15,9 +15,8 @@ var node_path = '../..';
 
 
 function html(cb) {
-  src('manager/**/*.html')     
-    .pipe(dest('dist/html'));  
-
+  src('manager/**/*.html')
+    .pipe(dest('dist/manager')); 
   cb();
 }
 

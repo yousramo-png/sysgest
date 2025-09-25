@@ -69,7 +69,7 @@
 <html lang="zxx" class="js">
 
 <head>
-    <base href="../">
+    
     <meta charset="utf-8">
     <meta name="author" content="Softnio">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -79,8 +79,8 @@
     <!-- Page Title  -->
     <title>Register | DashLite Admin Template</title>
     <!-- StyleSheets  -->
-    <link rel="stylesheet" href="./assets/css/style.css?ver=3.2.3">
-    <link id="skin-default" rel="stylesheet" href="./assets/css/theme.css?ver=3.2.3">
+    <link rel="stylesheet" href="assets/css/dashlite.css?ver=3.2.3">
+    <link id="skin-default" rel="stylesheet" href="assets/css/theme.css?ver=3.2.3">
 </head>
 
 <body class="nk-body bg-white npc-general pg-auth">
@@ -93,7 +93,7 @@
                 <div class="nk-content ">
                     <div class="nk-block nk-block-middle nk-auth-body wide-xs">
                         <div class="brand-logo pb-4 text-center">
-                            <a href="manager/index.html" class="logo-link">
+                            <a href="index.html" class="logo-link">
                                 <img class="logo-light logo-img logo-img-lg" src="./images/logo.png" srcset="./images/logo2x.png 2x" alt="logo">
                                 <img class="logo-dark logo-img logo-img-lg" src="./images/logo-dark.png" srcset="./images/logo-dark2x.png 2x" alt="logo-dark">
                             </a>
@@ -108,7 +108,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <form action="manager/register.php" method="POST">
+                                <form action="register.php" method="POST">
                                     <div class="form-group">
                                         <label class="form-label" for="name">Nom</label>
                                         <div class="form-control-wrap">
@@ -155,7 +155,7 @@
                                         <button class="btn btn-lg btn-primary btn-block">Créer le compte</button>
                                     </div>
                                 </form>
-                                <div class="form-note-s2 text-center pt-4"> Vous avez déjà un compte  <a href="manager/login.php"><strong>Connectez-vous ici</strong></a>
+                                <div class="form-note-s2 text-center pt-4"> Vous avez déjà un compte  <a href="login.php"><strong>Connectez-vous ici</strong></a>
                                 </div>
                                 
                              
