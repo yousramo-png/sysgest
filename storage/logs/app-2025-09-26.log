@@ -1,0 +1,75 @@
+[2025-09-26 10:03:53] [ERROR] PHP E_WARNING: require_once(C:\xampp\htdocs\sysgest/../manager/config/mailer.php): Failed to open stream: No such file or directory @ C:\xampp\htdocs\sysgest\init.php:23 
+[2025-09-26 10:03:53] [CRITICAL] Uncaught Exception {"type":"Error","msg":"Failed opening required 'C:\\xampp\\htdocs\\sysgest\/..\/manager\/config\/mailer.php' (include_path='C:\\xampp\\php\\PEAR')","file":"C:\\xampp\\htdocs\\sysgest\\init.php","line":23}
+[2025-09-26 15:00:31] [ERROR] PHP E_WARNING: Undefined variable $totalUsers @ C:\xampp\htdocs\sysgest\manager\utilisateurs.php:193 
+[2025-09-26 15:00:31] [ERROR] PHP E_WARNING: Undefined variable $limit @ C:\xampp\htdocs\sysgest\manager\utilisateurs.php:255 
+[2025-09-26 15:00:31] [ERROR] PHP E_DEPRECATED: htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated @ C:\xampp\htdocs\sysgest\manager\utilisateurs.php:255 
+[2025-09-26 15:00:31] [ERROR] PHP E_WARNING: Undefined variable $order @ C:\xampp\htdocs\sysgest\manager\utilisateurs.php:256 
+[2025-09-26 15:00:31] [ERROR] PHP E_DEPRECATED: htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated @ C:\xampp\htdocs\sysgest\manager\utilisateurs.php:256 
+[2025-09-26 15:00:31] [ERROR] PHP E_WARNING: Undefined variable $filterQ @ C:\xampp\htdocs\sysgest\manager\utilisateurs.php:260 
+[2025-09-26 15:00:31] [ERROR] PHP E_DEPRECATED: htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated @ C:\xampp\htdocs\sysgest\manager\utilisateurs.php:260 
+[2025-09-26 15:00:31] [ERROR] PHP E_WARNING: Undefined variable $limit @ C:\xampp\htdocs\sysgest\manager\utilisateurs.php:310 
+[2025-09-26 15:00:31] [ERROR] PHP E_WARNING: Undefined variable $limit @ C:\xampp\htdocs\sysgest\manager\utilisateurs.php:311 
+[2025-09-26 15:00:31] [ERROR] PHP E_WARNING: Undefined variable $limit @ C:\xampp\htdocs\sysgest\manager\utilisateurs.php:312 
+[2025-09-26 15:00:31] [ERROR] PHP E_WARNING: Undefined variable $order @ C:\xampp\htdocs\sysgest\manager\utilisateurs.php:319 
+[2025-09-26 15:00:31] [ERROR] PHP E_WARNING: Undefined variable $order @ C:\xampp\htdocs\sysgest\manager\utilisateurs.php:320 
+[2025-09-26 15:00:31] [ERROR] PHP E_WARNING: Undefined variable $formSubmitted @ C:\xampp\htdocs\sysgest\manager\utilisateurs.php:476 
+[2025-09-26 15:00:31] [ERROR] PHP E_WARNING: Undefined variable $formSubmitted @ C:\xampp\htdocs\sysgest\manager\utilisateurs.php:481 
+[2025-09-26 15:00:36] [ERROR] PHP E_WARNING: Undefined variable $totalUsers @ C:\xampp\htdocs\sysgest\manager\utilisateurs.php:193 
+[2025-09-26 15:00:36] [ERROR] PHP E_WARNING: Undefined variable $limit @ C:\xampp\htdocs\sysgest\manager\utilisateurs.php:255 
+[2025-09-26 15:00:36] [ERROR] PHP E_DEPRECATED: htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated @ C:\xampp\htdocs\sysgest\manager\utilisateurs.php:255 
+[2025-09-26 15:00:36] [ERROR] PHP E_WARNING: Undefined variable $order @ C:\xampp\htdocs\sysgest\manager\utilisateurs.php:256 
+[2025-09-26 15:00:36] [ERROR] PHP E_DEPRECATED: htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated @ C:\xampp\htdocs\sysgest\manager\utilisateurs.php:256 
+[2025-09-26 15:00:36] [ERROR] PHP E_WARNING: Undefined variable $filterQ @ C:\xampp\htdocs\sysgest\manager\utilisateurs.php:260 
+[2025-09-26 15:00:36] [ERROR] PHP E_DEPRECATED: htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated @ C:\xampp\htdocs\sysgest\manager\utilisateurs.php:260 
+[2025-09-26 15:00:36] [ERROR] PHP E_WARNING: Undefined variable $limit @ C:\xampp\htdocs\sysgest\manager\utilisateurs.php:310 
+[2025-09-26 15:00:36] [ERROR] PHP E_WARNING: Undefined variable $limit @ C:\xampp\htdocs\sysgest\manager\utilisateurs.php:311 
+[2025-09-26 15:00:36] [ERROR] PHP E_WARNING: Undefined variable $limit @ C:\xampp\htdocs\sysgest\manager\utilisateurs.php:312 
+[2025-09-26 15:00:36] [ERROR] PHP E_WARNING: Undefined variable $order @ C:\xampp\htdocs\sysgest\manager\utilisateurs.php:319 
+[2025-09-26 15:00:36] [ERROR] PHP E_WARNING: Undefined variable $order @ C:\xampp\htdocs\sysgest\manager\utilisateurs.php:320 
+[2025-09-26 15:00:36] [ERROR] PHP E_WARNING: Undefined variable $formSubmitted @ C:\xampp\htdocs\sysgest\manager\utilisateurs.php:476 
+[2025-09-26 15:00:36] [ERROR] PHP E_WARNING: Undefined variable $formSubmitted @ C:\xampp\htdocs\sysgest\manager\utilisateurs.php:481 
+[2025-09-26 15:00:37] [ERROR] PHP E_WARNING: Undefined variable $totalUsers @ C:\xampp\htdocs\sysgest\manager\utilisateurs.php:193 
+[2025-09-26 15:00:37] [ERROR] PHP E_WARNING: Undefined variable $limit @ C:\xampp\htdocs\sysgest\manager\utilisateurs.php:255 
+[2025-09-26 15:00:37] [ERROR] PHP E_DEPRECATED: htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated @ C:\xampp\htdocs\sysgest\manager\utilisateurs.php:255 
+[2025-09-26 15:00:37] [ERROR] PHP E_WARNING: Undefined variable $order @ C:\xampp\htdocs\sysgest\manager\utilisateurs.php:256 
+[2025-09-26 15:00:37] [ERROR] PHP E_DEPRECATED: htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated @ C:\xampp\htdocs\sysgest\manager\utilisateurs.php:256 
+[2025-09-26 15:00:37] [ERROR] PHP E_WARNING: Undefined variable $filterQ @ C:\xampp\htdocs\sysgest\manager\utilisateurs.php:260 
+[2025-09-26 15:00:37] [ERROR] PHP E_DEPRECATED: htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated @ C:\xampp\htdocs\sysgest\manager\utilisateurs.php:260 
+[2025-09-26 15:00:37] [ERROR] PHP E_WARNING: Undefined variable $limit @ C:\xampp\htdocs\sysgest\manager\utilisateurs.php:310 
+[2025-09-26 15:00:37] [ERROR] PHP E_WARNING: Undefined variable $limit @ C:\xampp\htdocs\sysgest\manager\utilisateurs.php:311 
+[2025-09-26 15:00:37] [ERROR] PHP E_WARNING: Undefined variable $limit @ C:\xampp\htdocs\sysgest\manager\utilisateurs.php:312 
+[2025-09-26 15:00:37] [ERROR] PHP E_WARNING: Undefined variable $order @ C:\xampp\htdocs\sysgest\manager\utilisateurs.php:319 
+[2025-09-26 15:00:37] [ERROR] PHP E_WARNING: Undefined variable $order @ C:\xampp\htdocs\sysgest\manager\utilisateurs.php:320 
+[2025-09-26 15:00:37] [ERROR] PHP E_WARNING: Undefined variable $formSubmitted @ C:\xampp\htdocs\sysgest\manager\utilisateurs.php:476 
+[2025-09-26 15:00:37] [ERROR] PHP E_WARNING: Undefined variable $formSubmitted @ C:\xampp\htdocs\sysgest\manager\utilisateurs.php:481 
+[2025-09-26 15:00:57] [ERROR] PHP E_WARNING: Undefined variable $totalUsers @ C:\xampp\htdocs\sysgest\manager\utilisateurs.php:193 
+[2025-09-26 15:00:57] [ERROR] PHP E_WARNING: Undefined variable $limit @ C:\xampp\htdocs\sysgest\manager\utilisateurs.php:255 
+[2025-09-26 15:00:57] [ERROR] PHP E_DEPRECATED: htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated @ C:\xampp\htdocs\sysgest\manager\utilisateurs.php:255 
+[2025-09-26 15:00:57] [ERROR] PHP E_WARNING: Undefined variable $order @ C:\xampp\htdocs\sysgest\manager\utilisateurs.php:256 
+[2025-09-26 15:00:57] [ERROR] PHP E_DEPRECATED: htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated @ C:\xampp\htdocs\sysgest\manager\utilisateurs.php:256 
+[2025-09-26 15:00:57] [ERROR] PHP E_WARNING: Undefined variable $filterQ @ C:\xampp\htdocs\sysgest\manager\utilisateurs.php:260 
+[2025-09-26 15:00:57] [ERROR] PHP E_DEPRECATED: htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated @ C:\xampp\htdocs\sysgest\manager\utilisateurs.php:260 
+[2025-09-26 15:00:57] [ERROR] PHP E_WARNING: Undefined variable $limit @ C:\xampp\htdocs\sysgest\manager\utilisateurs.php:310 
+[2025-09-26 15:00:57] [ERROR] PHP E_WARNING: Undefined variable $limit @ C:\xampp\htdocs\sysgest\manager\utilisateurs.php:311 
+[2025-09-26 15:00:57] [ERROR] PHP E_WARNING: Undefined variable $limit @ C:\xampp\htdocs\sysgest\manager\utilisateurs.php:312 
+[2025-09-26 15:00:57] [ERROR] PHP E_WARNING: Undefined variable $order @ C:\xampp\htdocs\sysgest\manager\utilisateurs.php:319 
+[2025-09-26 15:00:57] [ERROR] PHP E_WARNING: Undefined variable $order @ C:\xampp\htdocs\sysgest\manager\utilisateurs.php:320 
+[2025-09-26 15:00:57] [ERROR] PHP E_WARNING: Undefined variable $formSubmitted @ C:\xampp\htdocs\sysgest\manager\utilisateurs.php:476 
+[2025-09-26 15:00:57] [ERROR] PHP E_WARNING: Undefined variable $formSubmitted @ C:\xampp\htdocs\sysgest\manager\utilisateurs.php:481 
+[2025-09-26 15:02:46] [ERROR] PHP E_WARNING: Undefined variable $totalUsers @ C:\xampp\htdocs\sysgest\manager\utilisateurs.php:194 
+[2025-09-26 15:02:46] [ERROR] PHP E_WARNING: Undefined variable $limit @ C:\xampp\htdocs\sysgest\manager\utilisateurs.php:256 
+[2025-09-26 15:02:46] [ERROR] PHP E_DEPRECATED: htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated @ C:\xampp\htdocs\sysgest\manager\utilisateurs.php:256 
+[2025-09-26 15:02:46] [ERROR] PHP E_WARNING: Undefined variable $order @ C:\xampp\htdocs\sysgest\manager\utilisateurs.php:257 
+[2025-09-26 15:02:46] [ERROR] PHP E_DEPRECATED: htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated @ C:\xampp\htdocs\sysgest\manager\utilisateurs.php:257 
+[2025-09-26 15:02:46] [ERROR] PHP E_WARNING: Undefined variable $filterQ @ C:\xampp\htdocs\sysgest\manager\utilisateurs.php:261 
+[2025-09-26 15:02:46] [ERROR] PHP E_DEPRECATED: htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated @ C:\xampp\htdocs\sysgest\manager\utilisateurs.php:261 
+[2025-09-26 15:02:46] [ERROR] PHP E_WARNING: Undefined variable $limit @ C:\xampp\htdocs\sysgest\manager\utilisateurs.php:311 
+[2025-09-26 15:02:46] [ERROR] PHP E_WARNING: Undefined variable $limit @ C:\xampp\htdocs\sysgest\manager\utilisateurs.php:312 
+[2025-09-26 15:02:46] [ERROR] PHP E_WARNING: Undefined variable $limit @ C:\xampp\htdocs\sysgest\manager\utilisateurs.php:313 
+[2025-09-26 15:02:46] [ERROR] PHP E_WARNING: Undefined variable $order @ C:\xampp\htdocs\sysgest\manager\utilisateurs.php:320 
+[2025-09-26 15:02:46] [ERROR] PHP E_WARNING: Undefined variable $order @ C:\xampp\htdocs\sysgest\manager\utilisateurs.php:321 
+[2025-09-26 16:47:39] [CRITICAL] Uncaught Exception {"type":"PDOException","msg":"SQLSTATE[42S02]: Base table or view not found: 1146 Table 'sysgest.roles' doesn't exist","file":"C:\\xampp\\htdocs\\sysgest\\manager\\utilisateurs.php","line":263}
+[2025-09-26 16:53:40] [CRITICAL] Uncaught Exception {"type":"TypeError","msg":"Cannot access offset of type string on string","file":"C:\\xampp\\htdocs\\sysgest\\manager\\utilisateurs.php","line":139}
+[2025-09-26 18:51:52] [CRITICAL] Uncaught Exception {"type":"PDOException","msg":"SQLSTATE[42S22]: Column not found: 1054 Unknown column 'name' in 'where clause'","file":"C:\\xampp\\htdocs\\sysgest\\manager\\utilisateurs.php","line":245}
+[2025-09-26 18:52:03] [ERROR] PHP E_WARNING: Undefined variable $stmt @ C:\xampp\htdocs\sysgest\manager\utilisateurs.php:252 
+[2025-09-26 18:52:03] [CRITICAL] Uncaught Exception {"type":"Error","msg":"Call to a member function fetchAll() on null","file":"C:\\xampp\\htdocs\\sysgest\\manager\\utilisateurs.php","line":252}

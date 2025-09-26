@@ -22,7 +22,7 @@
     }
 
     // Vérification de l'unicité de l'email
-    $statement = $pdo->prepare("SELECT id FROM users WHERE email = :email");
+    $statement = $pdo->prepare("SELECT id FROM " . __DB_PREFIX__ . "users WHERE email = :email");
     $statement->execute([':email' => $email]);
     if ($statement->fetch()) {
         $registerError = "Cet email est déjà utilisé !";

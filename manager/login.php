@@ -9,19 +9,18 @@ if (isset($_SESSION['user_id'])) {
 
 require_once __DIR__ . "/../init.php";
 
-$loginError = '';
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $email = trim($_POST['email'] ?? '');
     $password = $_POST['password'] ?? '';
 
     if (empty($email) || empty($password)) {
-        $loginError = "Email et mot de passe sont requis !";
+        flash('danger', "Email et mot de passe sont requis !");
     } else {
         // Vérifier l'utilisateur
         $stmt = $pdo->prepare("
             SELECT id, custom_id, name, email, password, role_id, status 
-            FROM users 
+            FROM " . __DB_PREFIX__ . "users 
             WHERE email = :email
         ");
         $stmt->execute([':email' => $email]);
@@ -31,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             
             // Vérifier si compte actif
             if ($user['status'] !== 'active') {
-                $loginError = "Votre compte est inactif. Contactez l’administrateur.";
+                flash('danger', "Votre compte est inactif. Contactez l’administrateur.");
             } else {
                 // régénérer l'ID de session
                 session_regenerate_id(true);
@@ -65,7 +64,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 exit;
             }
         } else {
-            $loginError = "Identifiants invalides !";
+            flash('danger', "Identifiants invalides !");
         }
     }
 }
@@ -108,6 +107,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                         <div class="card card-bordered">
                             <div class="card-inner card-inner-lg">
                                 <div class="nk-block-head">
+                                    <?php render_flashes(); ?>
                                     <div class="nk-block-head-content">
                                         <h4 class="nk-block-title">Se connecter</h4>
                                         <div class="nk-block-des">
@@ -127,7 +127,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                                     <div class="form-group">
                                         <div class="form-label-group">
                                             <label class="form-label" for="password">Mot de passe</label>
-                                            <a class="link link-primary link-sm" href="html/pages/auths/auth-reset-v2.html">Mot de passe oublié?</a>
+                                            <a class="link link-primary link-sm" href="forgot.php">Mot de passe oublié?</a>
                                         </div>
                                         <div class="form-control-wrap">
                                             <a href="#" class="form-icon form-icon-right passcode-switch lg" data-target="password">
@@ -138,9 +138,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                                         </div>
                                     </div>
                                     
-                                    <?php if (!empty($loginError)): ?>
-                                        <p style="color: red;"><?php echo htmlspecialchars($loginError); ?></p>
-                                    <?php endif; ?>
+                                   
                                     <div class="form-group">
                                         <button class="btn btn-lg btn-primary btn-block">Se connecter</button>
                                     </div>

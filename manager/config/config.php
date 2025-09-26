@@ -12,7 +12,7 @@ define('__SITE_ICON__', '/images/logo.png');
 define('__SITE_FAVICON__', '/images/favicon.png');
 
 // Préfixe des tables SQL
-define('__DB_PREFIX__', 'app_');
+define('__DB_PREFIX__', 'sg_');
 
 // ==========================
 // BASE DE DONNÉES

@@ -19,3 +19,5 @@ require_once __DIR__ . "/manager/config/functions.php";
 // Charger le système d'alertes
 require_once __DIR__ . "/manager/config/alerts.php";
 
+
+require_once __DIR__ . "/manager/config/mailer.php";

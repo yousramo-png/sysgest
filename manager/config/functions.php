@@ -106,30 +106,30 @@ function create_textarea($name = "", $id = "", $class = "", $style = "", $placeh
 }
 
 // Supprimer un utilisateur
-function deleteUser($customId) {
+function deleteUser($id) {
     global $pdo;
-    $stmt = $pdo->prepare("DELETE FROM users WHERE custom_id = :id");
-    return $stmt->execute([':id' => $customId]);
+    $stmt = $pdo->prepare("DELETE FROM " . __DB_PREFIX__ . "users WHERE id = :id");
+    return $stmt->execute([':id' => $id]);
 }
 
 // Récupérer le statut actuel d’un utilisateur
-function getUserStatus($customId) {
+function getUserStatus($id) {
     global $pdo;
-    $stmt = $pdo->prepare("SELECT status FROM users WHERE custom_id = :id");
-    $stmt->execute([':id' => $customId]);
+    $stmt = $pdo->prepare("SELECT status FROM " . __DB_PREFIX__ . "users WHERE id = :id");
+    $stmt->execute([':id' => $id]);
     return $stmt->fetchColumn();
 }
 
 // Activer/Désactiver un utilisateur (toggle)
-function toggleUserStatus($customId) {
+function toggleUserStatus($id) {
     global $pdo;
-    $status = getUserStatus($customId);
+    $status = getUserStatus($id);
     if ($status !== false) {
         $newStatus = ($status === 'active') ? 'inactive' : 'active';
-        $stmt = $pdo->prepare("UPDATE users SET status = :status WHERE custom_id = :id");
+        $stmt = $pdo->prepare("UPDATE " . __DB_PREFIX__ . "users SET status = :status WHERE id = :id");
         return $stmt->execute([
             ':status' => $newStatus,
-            ':id'     => $customId
+            ':id'     => $id
         ]);
     }
     return false;

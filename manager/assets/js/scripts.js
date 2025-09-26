@@ -515,7 +515,7 @@
             dom: dom,
             language: {
               search: "",
-              searchPlaceholder: "Type in to Search",
+              searchPlaceholder: "Tapez pour rechercher",
               lengthMenu: "<span class='d-none d-sm-inline-block'>Show</span><div class='form-control-select'> _MENU_ </div>",
               info: "_START_ -_END_ of _TOTAL_",
               infoEmpty: "0",
